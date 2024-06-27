@@ -36,7 +36,7 @@ Sess01_script01_M002,angry,1.3,4.3
 ```
 
 ## 2. k-wav2vec, speechT5
-![image](https://github.com/hyukhunkoh-ai/Multi-Modal_korean_emotion_recogntion/assets/86921751/98deff5a-94e1-4837-87dc-2133d873751b)
+![image](/res.png)
 
 
 ## 3. 멀티모달 감정인식 프로세스
@@ -51,4 +51,16 @@ SpeechT5에 기반한 공유된 아키텍쳐들을 이용하여 한국어 상황
 단순한 텍스트만 이용하지 않고, 시그널 정보를 함께 고려하여 사용자의 감정을 판별하는 모델임
 
 ## 5. 코드 활용
+- Setup conda environment
+```
+conda env update -n base --file environment.yaml
+```
 
+
+```
+# train sample code
+bash qg_run.sh # Diffusion Model Training
+# test sample code
+## setup the model weight file in infer.py
+python test_evaluate_responses.py # Toxicity Detection
+```

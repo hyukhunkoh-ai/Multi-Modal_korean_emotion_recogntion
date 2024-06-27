@@ -1,5 +1,5 @@
 # Multi-Modal_Korean_Emotion_Recogntion
-
+[pdf](/pics/paper.pdf)
 ## 1. 데이터셋
 - [ETRI 감정 데이텃셋](https://nanum.etri.re.kr/share/kjnoh/KEMDy20?lang=ko_KR)
 
@@ -36,14 +36,14 @@ Sess01_script01_M002,angry,1.3,4.3
 ```
 
 ## 2. k-wav2vec, speechT5
-![image](/res.png)
+![image](/pics/res.png)
 
 
 ## 3. 멀티모달 감정인식 프로세스
 #### Translator-based data conversion
-![image](https://github.com/hyukhunkoh-ai/Multi-Modal_korean_emotion_recogntion/assets/86921751/a89bb6bf-7798-4210-9e1e-9ebad91fa9fc)
+![image](/pics/data_convergion.png)
 #### Emotion Recognition with Meta Attention
-![image](https://github.com/hyukhunkoh-ai/Multi-Modal_korean_emotion_recogntion/assets/86921751/5bcae9da-afe8-4aa2-94c4-76a77b51d6c6)
+![image](/pics/architecture.png)
 
 
 ## 4. AI 기반 신호 및 텍스트를 이용한 감정인식 모델
@@ -56,11 +56,10 @@ SpeechT5에 기반한 공유된 아키텍쳐들을 이용하여 한국어 상황
 conda env update -n base --file environment.yaml
 ```
 
-
 ```
 # train sample code
-bash qg_run.sh # Diffusion Model Training
+bash run.sh
 # test sample code
 ## setup the model weight file in infer.py
-python test_evaluate_responses.py # Toxicity Detection
+python multi_infer.py
 ```
